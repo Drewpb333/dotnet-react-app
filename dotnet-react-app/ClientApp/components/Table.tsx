@@ -7,11 +7,11 @@ interface TableDataState {
     newRow: {};
 }
 
-export default class Table extends React.Component<RouteComponentProps<{}>, TableDataState> {
+export default class Table extends React.Component<{}, TableDataState> {
     constructor() {
         super();
         this.state = {
-            rows: [],
+            rows: [{'name': 'MSFT', 'status': 'Pending', 'contact': 'John B.', 'performance': 'Strong'}],
             newRow: {}
         }
     }
@@ -41,7 +41,7 @@ export default class Table extends React.Component<RouteComponentProps<{}>, Tabl
     updateNewRow(event: { target: { name: string | number; value: any; }; }) {
         this.setState(prevState => {
             let row = {...prevState.newRow};
-            row[event.target.name] = event.target.value;                                     
+            (row as any)[event.target.name] = event.target.value;                                     
             return { row };                                 
         })
     }

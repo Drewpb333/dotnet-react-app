@@ -22,13 +22,11 @@
 
   <ItemGroup>
     <None Remove="ClientApp\components\Company.tsx" />
-    <None Remove="ClientApp\components\Row.tsx" />
     <None Remove="ClientApp\components\Table.tsx" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\components\Company.tsx" />
-    <TypeScriptCompile Include="ClientApp\components\Row.tsx" />
     <TypeScriptCompile Include="ClientApp\components\Table.tsx" />
   </ItemGroup>
 

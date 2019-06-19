@@ -2,7 +2,7 @@ import * as React from 'react';
 import Table from './Table';
 import { RouteComponentProps } from 'react-router';
 
-export class Home extends React.Component<RouteComponentProps<{}>, {}> {
+export class Home extends React.Component<RouteComponentProps<{}>> {
     constructor() {
         super();
     }
@@ -13,7 +13,7 @@ export class Home extends React.Component<RouteComponentProps<{}>, {}> {
                 <Table />
             </div>
             <footer>
-                Copyright © 2019
+                <p>Copyright 2019</p>
             </footer>
         </div>;
     }
