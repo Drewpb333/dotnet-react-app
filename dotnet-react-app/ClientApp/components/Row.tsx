@@ -1,6 +1,6 @@
 ﻿import * as React from 'react';
 
-export function Row(props) {
+export default function Row(props) {
     if(props)
     return (
         <Row>
