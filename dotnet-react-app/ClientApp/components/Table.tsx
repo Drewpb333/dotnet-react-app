@@ -57,7 +57,7 @@ export default class Table extends React.Component<{}, TableDataState> {
     }
 
     renderRows() {
-        this.state.rows.forEach(row => {
+        this.state.rows.map(row => {
             return (
                 <tr>
                     <td>{row.name}</td>
