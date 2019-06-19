@@ -14,11 +14,7 @@ export default class Table extends React.Component {
                     <th>Status</th>
                     <th>Key Contact</th>
                     <th>Financial Performance</th>
-                    <th></th>
-                </tr>
-                <tr>
-                </tr>
-                <tr>
+                    <th>Edit/Delete</th>
                 </tr>
            </table>
         );
