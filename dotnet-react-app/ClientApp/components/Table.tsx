@@ -1,13 +1,18 @@
 ﻿import * as React from 'react';
-import Row from './Row';
+import { RouteComponentProps } from 'react-router';
+import { Link, NavLink } from 'react-router-dom';
 
-export default class Table extends React.Component {
+interface TableDataState {
+    rows: any[];
+    newRow: {};
+}
+
+export default class Table extends React.Component<RouteComponentProps<{}>, TableDataState> {
     constructor() {
         super();
         this.state = {
             rows: [],
-            newRow: ["","","",""],
-            isRowSaved: false
+            newRow: {}
         }
     }
 
@@ -23,24 +28,46 @@ export default class Table extends React.Component {
         );
     }
 
-    createUnsavedRow() {
-        let potentialRow = [];
-
+    createNewRow() {
         return (<tr>
-            <td><input value="Company" onChange={this.updateNewRow}></input></td>
-            <td><input value="Status" onChange={this.updateNewRow}></input></td>
-            <td><input value="Key Contact" onChange={this.updateNewRow}></input></td>
-            <td><input value="Financial Performance" onChange={this.updateNewRow}></input></td>
+            <td><input name="company" onChange={this.updateNewRow}></input></td>
+            <td><input name="status" onChange={this.updateNewRow}></input></td>
+            <td><input name="contact" onChange={this.updateNewRow}></input></td>
+            <td><input name="performance" onChange={this.updateNewRow}></input></td>
             <td><button onClick={this.createSavedRow}>Save</button></td>
         </tr>);
     }
 
+    updateNewRow(event: { target: { name: string | number; value: any; }; }) {
+        this.setState(prevState => {
+            let row = {...prevState.newRow};
+            row[event.target.name] = event.target.value;                                     
+            return { row };                                 
+        })
+    }
+
     createSavedRow() {
-        this.setState()
+        this.setState(prevState => {
+            let newSavedRow = { ...prevState.newRow }; 
+            let newRows = [...prevState.rows];
+            newRows.push(newSavedRow);
+            return newRows;
+        });
+        this.renderRows();
     }
 
     renderRows() {
-        this.state.rows
+        this.state.rows.forEach(row => {
+            return (
+                <tr>
+                    <td>{row.name}</td>
+                    <td>{row.status}</td>
+                    <td>{row.contact}</td>
+                    <td>{row.performance}</td>
+                    <td><input>Edit</input><input>Delete</input></td>
+                </tr>
+            );
+        })
     }
 
     render() {
@@ -48,7 +75,7 @@ export default class Table extends React.Component {
         return (
             <div>
                 <div id="btn-menu">
-                    <button onClick={this.createRow()}>Add Company</button>
+                    <button onClick={this.createNewRow}>Add Company</button>
                 </div>
                 <table>
                     {this.createHeading()}
