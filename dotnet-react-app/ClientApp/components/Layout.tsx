@@ -6,23 +6,13 @@ export interface LayoutProps {
 
 export class Layout extends React.Component<LayoutProps, {}> {
     public render() {
-        return <div className='container-fluid'>
-            //<div className='row'>
+        return <div id="container">
                 <div id="banner">
-                    //<NavMenu />
+                    <h1>Prospective Company App</h1>    
                 </div>
                 <div id="main-content">
                     {this.props.children}
                 </div>
-            //</div>
-        </div>
-        //return
-        //<div>
-        //    <div id="banner"><h1>Prospective Company App</h1></div>
-        //        <div id="main-content">
-        //            { this.props.children }
-        //        </div>
-        //    </div>
-        //</div>;
+            </div>
     }
 }

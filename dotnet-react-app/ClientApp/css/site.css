@@ -1,8 +1,26 @@
-.main-nav li .glyphicon {
+#banner {
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    background-color: #262272;
+    color: white;
+    padding: 15rem 0;
+}
+
+#main-content {}
+
+#btn-menu{
+    margin: 5% 20%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    color: white;
+}
+/*.main-nav li .glyphicon {
     margin-right: 10px;
 }
 
-/* Highlighting rules for nav menu items */
+ Highlighting rules for nav menu items 
 .main-nav li a.active,
 .main-nav li a.active:hover,
 .main-nav li a.active:focus {
@@ -10,7 +28,7 @@
     color: white;
 }
 
-/* Keep the nav menu independent of scrolling and on top of other items */
+ Keep the nav menu independent of scrolling and on top of other items 
 .main-nav {
     position: fixed;
     top: 0;
@@ -20,14 +38,14 @@
 }
 
 @media (max-width: 767px) {
-    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+     On small screens, the nav menu spans the full width of the screen. Leave a space for it. 
     body {
         padding-top: 50px;
     }
 }
 
 @media (min-width: 768px) {
-    /* On small screens, convert the nav menu to a vertical sidebar */
+     On small screens, convert the nav menu to a vertical sidebar 
     .main-nav {
         height: 100%;
         width: calc(25% - 20px);
@@ -57,10 +75,10 @@
         border-radius: 4px;
     }
     .main-nav .navbar a {
-        /* If a menu item's text is too long, truncate it */
+         If a menu item's text is too long, truncate it 
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-}
+}*/
