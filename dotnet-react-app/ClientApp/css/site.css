@@ -4,81 +4,92 @@
     text-align: center;
     background-color: #262272;
     color: white;
-    padding: 15rem 0;
+    padding: 1rem 0;
 }
 
-#main-content {}
+#main-content {
+}
 
-#btn-menu{
+#btn-menu {
     margin: 5% 20%;
     display: flex;
     justify-content: space-between;
     font-size: 1.8rem;
-    color: white;
-}
-/*.main-nav li .glyphicon {
-    margin-right: 10px;
 }
 
- Highlighting rules for nav menu items 
-.main-nav li a.active,
-.main-nav li a.active:hover,
-.main-nav li a.active:focus {
-    background-color: #4189C7;
-    color: white;
+.panel-list a {
+    color: #69707a;
 }
 
- Keep the nav menu independent of scrolling and on top of other items 
-.main-nav {
-    position: fixed;
-    top: 0;
+    .panel-list a:hover {
+        color: #1fc8db;
+    }
+
+.panel-tabs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 11px;
+    padding: 5px 10px 0;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    .panel-tabs a {
+        border-bottom: 1px solid #d3d6db;
+        margin-bottom: -1px;
+        padding: 5px;
+    }
+
+        .panel-tabs a.is-active {
+            border-bottom-color: #222324;
+            color: #222324;
+        }
+
+    .panel-tabs:not(:last-child) {
+        border-bottom: 1px solid #d3d6db;
+    }
+
+.panel-block {
+    color: #222324;
+    display: block;
+    line-height: 16px;
+    padding: 10px;
+}
+
+    .panel-block:not(:last-child) {
+        border-bottom: 1px solid #d3d6db;
+    }
+
+a.panel-block:hover {
+    background-color: #f5f7fa;
+}
+
+.panel {
+    border: 1px solid #d3d6db;
+    border-radius: 5px;
+}
+
+    .panel:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+.modal-background {
+    bottom: 0;
     left: 0;
+    position: absolute;
     right: 0;
-    z-index: 1;
+    top: 0;
+    background-color: rgba(17, 17, 17, 0.86);
 }
 
-@media (max-width: 767px) {
-     On small screens, the nav menu spans the full width of the screen. Leave a space for it. 
-    body {
-        padding-top: 50px;
-    }
+.modal-content, .modal-card {
+    margin: 0 20px;
+    max-height: calc(100vh - 160px);
+    overflow: auto;
+    position: relative;
+    width: 100%;
 }
-
-@media (min-width: 768px) {
-     On small screens, convert the nav menu to a vertical sidebar 
-    .main-nav {
-        height: 100%;
-        width: calc(25% - 20px);
-    }
-    .main-nav .navbar {
-        border-radius: 0px;
-        border-width: 0px;
-        height: 100%;
-    }
-    .main-nav .navbar-header {
-        float: none;
-    }
-    .main-nav .navbar-collapse {
-        border-top: 1px solid #444;
-        padding: 0px;
-    }
-    .main-nav .navbar ul {
-        float: none;
-    }
-    .main-nav .navbar li {
-        float: none;
-        font-size: 15px;
-        margin: 6px;
-    }
-    .main-nav .navbar li a {
-        padding: 10px 16px;
-        border-radius: 4px;
-    }
-    .main-nav .navbar a {
-         If a menu item's text is too long, truncate it 
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}*/
